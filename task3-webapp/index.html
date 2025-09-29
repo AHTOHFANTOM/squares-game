@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Квадраты</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Игра Квадраты</h1>
+        <p>Постройте квадрат из своих фигур, чтобы победить.!</p>
+    </header>
+
+    <div class="game-controls">
+        <div class="game-setup">
+            <label for="board-size">Размер платы:</label>
+            <select id="board-size">
+                <option value="5">5x5</option>
+                <option value="7">7x7</option>
+                <option value="9">9x9</option>
+            </select>
+
+            <label for="player-color">Твой цвет:</label>
+            <select id="player-color">
+                <option value="w">Белые</option>
+                <option value="b">Черные</option>
+            </select>
+
+            <button id="start-game" class="btn btn-primary">Начать игру</button>
+            <button id="reset-game" class="btn btn-secondary" disabled>Перезагрузить</button>
+        </div>
+
+        <div class="game-status">
+            <div id="current-player">Текущий ход: <span id="turn-indicator">-</span></div>
+            <div id="game-message">Нажмите «Начать игру», чтобы начать</div>
+        </div>
+    </div>
+
+    <div class="game-board-container">
+        <div id="game-board" class="game-board"></div>
+    </div>
+
+    <div class="game-info">
+        <h3>Как играть:</h3>
+        <ul>
+            <li>Нажмите на пустые клетки, чтобы разместить свои фигуры.</li>
+            <li>Сформируйте квадрат из 4 фишек вашего цвета, чтобы выиграть.</li>
+            <li>Квадраты можно вращать (в форме ромба) или выровнять по осям.</li>
+            <li>Компьютер будет делать ходы автоматически после вашего</li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
